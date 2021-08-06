@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <main id="main" class="main">
+        <header id="header">
+            <div class="container">
+                <nav class="nav">
+                    <div class="logo">
+                        <img src="https://1000logos.net/wp-content/uploads/2016/11/Facebook-Logo-Meaning.jpg" alt="facebook logo">
+                    </div>
+                    <ul class="manu">
+                        <li><a class="nav_active" href="#">Home</a></li>
+                        <li><a href="#">watch</a></li>
+                        <li><a href="#">games</a></li>
+                        <li><a href="#">products</a></li>
+                        <li><a id="user_photo" href="#">
+                            <div id="img"></div>
+                            <span id="user_name">SM Tawhid</span>
+                            <div id="log_out">Log Out</div>
+                        </a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    </main>
+    <section class="registration active" id="registration">
+        <div class="registration_wrapper">
+            <form class="login_input">
+                <h2 class="">login</h2>
+                <input id="login_email" type="text" placeholder="Enter Email or User Name">
+                <input id="login_password"  type="password" placeholder="Enter Password">
+                <button id="login_submit"  type="submit" class="login_button">login</button>
+                <p>Create New Account
+                    <a class="change_loginButton" href="#">Sing up</a>
+                </p>
+            </form>
+            <form class="singup_input input_dactive">
+                <h2 class="">sing up</h2>
+                <input id="singup_name" type="text" placeholder="Enter Youe Name">
+                <input id="singup_email" type="text" placeholder="Enter Email or Phone">
+                <input id="singup_userName" type="text" placeholder="Enter User Name">
+                <input id="singup_PhotoUrl" type="text" placeholder="Enter Image http://url (optional)">
+                <input id="singup_password" type="password" placeholder="Enter Password">
+                <input id="singup_confirmPassword" type="password" placeholder="Enter Confirm Password">
+                <button id="singup_submit" type="submit" class="singup_button">Sing up</button>
+                <p>Alredy have an account
+                    <a class="change_loginButton" href="#">login</a>
+                </p>
+            </form>
+        </div>
+        <div class="massege">
+            <div class="massege_img">
+                <img src="https://res.cloudinary.com/lokaci/image/upload/v1615492720/CourteousPhonyHorsemouse-small_ykwew2.gif" alt="">
+            </div>
+            <span>success!!</span>
+        </div>
+    </section>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

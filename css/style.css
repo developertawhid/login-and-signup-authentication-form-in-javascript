@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+::after,
+::before,
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #ddd;
+}
+
+img {
+    object-fit: cover;
+}
+
+.container {
+    max-width: 1140px;
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.main {
+    display: none;
+}
+
+#header {
+    background: white;
+}
+
+.logo {
+    height: 70px;
+}
+
+.logo img {
+    object-fit: contain;
+    height: 100%;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav > ul.manu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+.nav > ul.manu > li {
+    padding: 0 15px;
+}
+
+.nav > ul.manu > li > a{
+    padding: 5px 5px;
+    color: #28498f;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    border-bottom: 2px solid #fff;
+    text-transform: uppercase;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+}
+
+ul.manu > li > .nav_active, 
+ul.manu > li > a:hover {
+    border-bottom-color:#4867AA;
+    color: #4867AA;
+}
+
+#user_photo {
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-weight: 800;
+    font-size: 18px;
+    height: 50px;
+    border-bottom: 0;
+    padding: 8px 12px;
+    border-radius: 23px;
+    -webkit-border-radius: 23px;
+    -moz-border-radius: 23px;
+    -ms-border-radius: 23px;
+    -o-border-radius: 23px;
+}
+
+#log_out {
+    position: absolute;
+    bottom: -55px;
+    left: 18px;
+    background-color: #f2f2f2;
+    padding: 15px;
+    color: red;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: none;
+}
+
+#user_photo:hover #log_out {
+    display: block;
+}
+
+#user_photo #img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bolder;
+    font-size: 30px;
+    height: 40px;
+    width: 40px;
+    background: #f2f2f2;
+    margin-right: 10px;
+    border-radius: 23px;
+    -webkit-border-radius: 23px;
+    -moz-border-radius: 23px;
+    -ms-border-radius: 23px;
+    -o-border-radius: 23px;
+}
+
+#user_photo:hover {
+    border-bottom: initial;
+    background: #f2f2f2;
+}
+
+#user_photo #img img {
+    object-fit: cover;
+    height: 100%;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.registration {
+    width: 100%;
+    height: 100vh;
+    display: none;
+}
+.registration_wrapper {
+    width: 500px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 15px 25px 25px 25px;
+    background-color: white;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+.change_loginButton {
+    text-transform: uppercase;
+    font-size: 18px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-weight: 500;
+}
+
+.change_loginButton:hover {
+    color: #28498f;
+}
+
+.login_input > h2, .singup_input > h2 {
+    text-transform: uppercase;
+    font-size: 35px;
+    background: transparent;
+    text-align: center;
+    margin-bottom: 10px;
+    clear: right;
+    color: #28498f;
+} 
+
+.login_input > p, .singup_input > p {
+    text-align: center;
+} 
+
+.login_input, .singup_input {
+    display: flex;
+    flex-direction: column;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+    transform-origin: bottom;
+} 
+
+.input_dactive {
+    display: none;
+}
+
+.registration_wrapper input {
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+    outline: none;
+    font-size: 16px;
+    border: 1px solid #ddd;
+}
+
+.registration_wrapper input:focus {
+    box-shadow: 0px 0px 8px 1px #1439d0;
+}
+
+#singup_submit, #login_submit {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+    outline: none;
+    border: 1px solid #ddd;
+    text-transform: uppercase;
+    color: white;
+    background-color: #3960b6;
+}
+
+.massege {
+    background: white;
+    padding: 15px;
+    width: 270px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: fit-content;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    transition: 0.3s;
+    transform: translate(-50%, -50%) scale(0);
+    -webkit-transform: translate(-50%, -50%) scale(0);
+    -moz-transform: translate(-50%, -50%) scale(0);
+    -ms-transform: translate(-50%, -50%) scale(0);
+    -o-transform: translate(-50%, -50%) scale(0);
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+
+.massege span {
+    font-size: 40px;
+    color: green;
+}
+
+.massege_img {
+    margin-top: 15px;
+    position: relative;
+    height: 120px;
+    width: 120px;
+    overflow: hidden;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.massege_img img {
+    width: 350px;
+    position: absolute;
+    top: -73px;
+    left: -117px;
+}
+
+.active {
+    display: block !important;
+}
