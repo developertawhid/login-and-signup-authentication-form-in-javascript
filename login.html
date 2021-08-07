@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        if(!localStorage.getItem('registration_db')) {
+            localStorage.setItem("registration_db", JSON.stringify([]))
+        }
+        if(!localStorage.getItem('login_db')) {
+            localStorage.setItem("login_db", JSON.stringify({}))
+        }
+        if(JSON.parse(localStorage.getItem('login_db')).name) {
+            location.href = 'index.html'
+        }
+    </script>
+</head>
+<body>
+    <section class="registration active" id="registration">
+        <div class="registration_wrapper">
+            <form class="login_input">
+                <h2 class="">login</h2>
+                <input id="login_email" type="text" placeholder="Enter Email or User Name" autocomplete="off">
+                <input id="login_password"  type="password" placeholder="Enter Password" autocomplete="off">
+                <button id="login_submit"  type="submit" class="login_button">login</button>
+                <p>Create New Account
+                    <a class="change_login_Button" href="singup.html">Sing up</a>
+                </p>
+            </form>
+        </div>
+        <div class="massege">
+            <div class="massege_img">
+                <img src="https://res.cloudinary.com/lokaci/image/upload/v1615492720/CourteousPhonyHorsemouse-small_ykwew2.gif" alt="">
+            </div>
+            <span>success!!</span>
+        </div>
+    </section>
+
+    <script src="js/login.js"></script>
+</body>
+</html>

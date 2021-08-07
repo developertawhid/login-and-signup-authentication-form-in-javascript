@@ -7,8 +7,6 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
     <script>
-        localStorage.removeItem("login_db");
-
         if(!localStorage.getItem('registration_db')) {
             localStorage.setItem("registration_db", JSON.stringify([]))
         }
@@ -29,8 +27,8 @@
                         <img src="https://1000logos.net/wp-content/uploads/2016/11/Facebook-Logo-Meaning.jpg" alt="facebook logo">
                     </div>
                     <ul class="manu">
-                        <li><a class="nav_active" href="index.html">Home</a></li>
-                        <li><a href="watch.html">watch</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a class="nav_active" href="watch.html">watch</a></li>
                         <li><a href="login.html">login</a></li>
                         <li><a href="singup.html">sing up</a></li>
                         <li><a id="user_photo" href="#">

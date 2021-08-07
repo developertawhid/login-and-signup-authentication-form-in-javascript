@@ -26,10 +26,6 @@ img {
     margin: 0 auto;
 }
 
-.main {
-    display: none;
-}
-
 #header {
     background: white;
 }
@@ -77,8 +73,8 @@ img {
 
 ul.manu > li > .nav_active, 
 ul.manu > li > a:hover {
-    border-bottom-color:#4867AA;
-    color: #4867AA;
+    border-bottom-color:#4867AA !important;
+    color: #4867AA !important;
 }
 
 #user_photo {
@@ -208,9 +204,6 @@ ul.manu > li > a:hover {
     transform-origin: bottom;
 } 
 
-.input_dactive {
-    display: none;
-}
 
 .registration_wrapper input {
     padding: 15px;
@@ -303,4 +296,8 @@ ul.manu > li > a:hover {
 
 .active {
     display: block !important;
+}
+
+h2:focus {
+    box-shadow: 0px 0px 8px 1px #1439d0;
 }

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        if(!localStorage.getItem('registration_db')) {
+            localStorage.setItem("registration_db", JSON.stringify([]))
+        }
+        if(!localStorage.getItem('login_db')) {
+            localStorage.setItem("login_db", JSON.stringify({}))
+        }
+        if(JSON.parse(localStorage.getItem('login_db')).name) {
+            location.href = 'index.html'
+        }
+    </script>
+</head>
+<body>
+    <section class="registration active" id="registration">
+        <div class="registration_wrapper">
+            <form class="singup_input">
+                <h2 class="">sing up</h2>
+                <input id="singup_name" type="text" placeholder="Enter Youe Name" autocomplete="off">
+                <input id="singup_email" type="text" placeholder="Enter Email or Phone" autocomplete="off">
+                <input id="singup_userName" type="text" placeholder="Enter User Name"  autocomplete="off">
+                <input id="singup_PhotoUrl" type="text" placeholder="Enter Image http://url (optional)"  autocomplete="off">
+                <input id="singup_password" type="password" placeholder="Enter Password">
+                <input id="singup_confirmPassword" type="password" placeholder="Enter Confirm Password">
+                <button id="singup_submit" type="submit" class="singup_button">Sing up</button>
+                <p>Alredy have an account
+                    <a class="change_singup_Button" href="login.html">login</a>
+                </p>
+            </form>
+        </div>
+        <div class="massege">
+            <div class="massege_img">
+                <img src="https://res.cloudinary.com/lokaci/image/upload/v1615492720/CourteousPhonyHorsemouse-small_ykwew2.gif" alt="">
+            </div>
+            <span>success!!</span>
+        </div>
+    </section>
+
+    <script src="js/singup.js"></script>
+</body>
+</html>
